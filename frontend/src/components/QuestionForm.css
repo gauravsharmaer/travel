@@ -1,0 +1,67 @@
+.background-image {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Change to min-height to ensure the background covers the viewport */
+}
+
+.fullscreen-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.question-form {
+  position: relative;
+  z-index: 1;
+}
+
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullscreen-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+  transform: translateY(100%);
+}
+
+.overlay-show .fullscreen-image {
+  transform: translateY(0);
+}
+
+.output-box {
+  position: relative;
+  margin-top: 20px; /* Adjust margin as needed */
+  padding: 10px;
+  background-color: #fff; /* Background color for the output box */
+}
+
+.output-box.no-highlight {
+  user-select: none; /* Prevent the output box from being selectable */
+}
+
+.output-textarea {
+  width: calc(100% - 20px); /* Adjust width to account for padding */
+  height: 300px; /* Set the height of the output textarea */
+  resize: vertical;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: scroll; /* Enable vertical scrolling */
+}
